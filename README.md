@@ -3,6 +3,7 @@
 
  ## Installation
  - Download the [latest v6 release](https://builds.bepinex.dev/projects/bepinex_be/733/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.733%2B995f049.zip) of BepInEx. (`BepInEx-Unity.Il2CPP-win-x64-6.0.0`)
+ - Extract the .zip into `steamapps\common\Desktop Mate`
  - Download the latest version of the mod .dll from the releases section.
  - Place the .dll in `steamapps\common\Desktop Mate\BepInEx\plugins`.
  - (Optional) Create a `vrm` folder in the `steamapps\common\Desktop Mate\BepInEx` folder. If you do not make one, the mod will make one for you.
