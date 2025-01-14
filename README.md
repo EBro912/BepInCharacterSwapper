@@ -26,7 +26,7 @@
 - Allow customization of buttons
 
 ## Known Issues
- - When the application bootstraps sometimes will lose focus through the current window (it should be placed behind the current window, just minimize the current window and click over the character)
+ - When the application launches sometimes will lose focus through the current window (it should be placed behind the current window, just minimize the current window and click over the character)
    
 ## External Libraries
 This mod uses a slightly modified version of the VRMLoader and CharacterLoader from [YusufOzmen01/desktopmate-custom-avatar-loader](https://github.com/YusufOzmen01/desktopmate-custom-avatar-loader). Licensing can be found below:
