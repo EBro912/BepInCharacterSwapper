@@ -93,7 +93,7 @@ namespace CharacterSwapper.Patches
                     buttonKeypair.Add(path, modButton.GetComponent<Button>());
 
                     modButton.transform.position = new Vector3(0.83f, offset, -1f);
-                    modButton.transform.localScale = new Vector3(1.2f, 1.2f, 1f);
+                    modButton.transform.localScale = new Vector3(1.5f, 1.2f, 1f);
                     modButton.name = name + "_Button";
                     modButton.GetComponentInChildren<Text>().text = name;
                     System.Action action = () =>
