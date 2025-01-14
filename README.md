@@ -9,7 +9,7 @@
  - Extract the .zip into `steamapps\common\Desktop Mate`
  - Download the latest version of the mod .dll from the releases section.
  - Place the .dll in `steamapps\common\Desktop Mate\BepInEx\plugins`.
- - (Optional) Create a `UserData/vrm` folder in the `steamapps\common\Desktop Mate` folder. If you do not make one, the mod will make one for you.
+ - (Optional) Create a `vrm` folder in the `steamapps\common\Desktop Mate` folder. If you do not make one, the mod will make one for you.
 
 ## Usage
 - Place all of your `.vrm` files into the aforementioned `vrm` folder.
@@ -19,28 +19,22 @@
 
 ![preview](https://cdn.discordapp.com/attachments/343113240143986709/1328204316137226250/image.png?ex=6785da29&is=678488a9&hm=294b679aa54a290a4b05567dcd203c926d648a2c27459bba03813cd2bc4696f3&)
 
-## Applied changes
- - Window patch (won't show on alt+tab/win + tab)
- - Detects models added to folder (addition/deletion of .vrm files at runtime)
- - Saves the current model to config file to load it on boot.
-
 ## Planned Changes
 - Per-model settings
 - Allow customization of buttons
 
 ## Known Issues
- - When the application launches sometimes will lose focus through the current window (it should be placed behind the current window, just minimize the current window and click over the character)
-
+ - When the application launches there is a small chance that the window will appear below the current window (simply minimize the current window).
+   
 ## Build Guide
  1. Install BepInEx and launch the game.
- 2. Once the game completly booted and the stub dlls are created create the folder 'src' on the root directory of the game. `steamapps\common\Desktop Mate`
- 3. Perform a git clone over this repos or download it as zip and extract its contents into the 'src' folder you just created. (It should look like `steamapps\common\Desktop Mate\src\CharacterSwapper`)
- 4. Open the .sln file.
- 5. Set the compiler profile to release instead of debug to get the most performance ![image](https://github.com/user-attachments/assets/1ebdc51c-1b3a-4dda-b50a-719ed38eb2e7)
- 6. (OPTIONAL) Check if there's no dependency error (`Project Solution/Project/Dependencies/Assemblies` - If any dep is missing try adding it by yourself searching on the `BepInEx/Interop/` folder)
- 7. Compile.
- 8. Once compiled go into `bin/Release/netstandard2.1/` and copy the CharacterSwapper.dll into `BepInEx/plugins`
- 9. There's the mod built and installed!
+ 2. Once the game completly booted and the stub dlls are clone the repository to your disk.
+ 3. Open the .sln file.
+ 4. Set the compiler profile to release instead of debug to get the most performance ![image](https://github.com/user-attachments/assets/1ebdc51c-1b3a-4dda-b50a-719ed38eb2e7)
+ 5. Add the dependencies to the project (`Project Solution/Project/Dependencies/Assemblies`) add the missing dependencies to the project from the `BepInEx/interop` folder
+ 6. Compile.
+ 7. Once compiled go into `bin/Release/netstandard2.1/` and copy the BepInCharacterSwapper.dll into `BepInEx/plugins`
+ 8. There's the mod built and installed!
 ]()
    
 ## External Libraries
