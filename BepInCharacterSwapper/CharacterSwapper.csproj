@@ -1,0 +1,120 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AssemblyName>CharacterSwapper</AssemblyName>
+    <Description>Desktop Mate Character Swapper for BepInEx</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>Latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>CharacterSwapper</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="Patches\MainManager_Patches.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>../../..\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>../../..\BepInEx\interop\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>../../..\BepInEx\core\BepInEx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader.Core">
+      <HintPath>../../..\BepInEx\core\BepInEx.Preloader.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Unity.Common">
+      <HintPath>../../..\BepInEx\core\BepInEx.Unity.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>../../..\BepInEx\core\BepInEx.Unity.IL2CPP.dll</HintPath>
+    </Reference>
+    <Reference Include="FastSpringBone10">
+      <HintPath>../../..\BepInEx\interop\FastSpringBone10.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Common">
+      <HintPath>../../..\BepInEx\core\Il2CppInterop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>../../..\BepInEx\core\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>../../..\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="UniGLTF">
+      <HintPath>../../..\BepInEx\interop\UniGLTF.dll</HintPath>
+    </Reference>
+    <Reference Include="UniGLTF.Utils">
+      <HintPath>../../..\BepInEx\interop\UniGLTF.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="UniHumanoid">
+      <HintPath>../../..\BepInEx\interop\UniHumanoid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Runtime">
+      <HintPath>../../..\BepInEx\interop\Unity.2D.Animation.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>../../..\BepInEx\interop\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>../../..\BepInEx\interop\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>../../..\BepInEx\interop\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>../../..\BepInEx\interop\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>../../..\BepInEx\interop\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>../../..\BepInEx\interop\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>../../..\BepInEx\interop\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>../../..\BepInEx\interop\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="VRM10">
+      <HintPath>../../..\BepInEx\interop\VRM10.dll</HintPath>
+    </Reference>
+    <Reference Include="VrmLib">
+      <HintPath>../../..\BepInEx\interop\VrmLib.dll</HintPath>
+    </Reference>
+    <Reference Include="VRMShaders.GLTF.IO.Runtime">
+      <HintPath>../../..\BepInEx\interop\VRMShaders.GLTF.IO.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="VRMShaders.GLTF.UniUnlit.Runtime">
+      <HintPath>../../..\BepInEx\interop\VRMShaders.GLTF.UniUnlit.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="VRMShaders.VRM.IO.Runtime">
+      <HintPath>../../..\BepInEx\interop\VRMShaders.VRM.IO.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="VRMShaders.VRM10.Format.Runtime">
+      <HintPath>../../..\BepInEx\interop\VRMShaders.VRM10.Format.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="VRMShaders.VRM10.MToon10.Runtime">
+      <HintPath>../../..\BepInEx\interop\VRMShaders.VRM10.MToon10.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="VRoidSDK">
+      <HintPath>../../..\BepInEx\interop\VRoidSDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

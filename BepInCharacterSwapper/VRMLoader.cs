@@ -2,7 +2,7 @@
 using UnityEngine;
 using UniVRM10;
 
-namespace BepInCharacterSwapper
+namespace CharacterSwapper
 {
     internal class VRMLoader
     {

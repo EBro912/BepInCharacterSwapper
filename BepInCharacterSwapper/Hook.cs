@@ -1,12 +1,20 @@
-﻿using System.IO;
+﻿using CharacterSwapper.Patches;
+using BepInEx.Configuration;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
+using System;
+using static UnityEngine.UI.CanvasScaler;
 
-namespace BepInCharacterSwapper
+namespace CharacterSwapper
 {
     internal class Hook : MonoBehaviour
     {
         public static Hook Instance;
         private VRMLoader VRMLoader;
+
+        private bool _init = false;
 
         private void Awake()
         {
@@ -18,6 +26,28 @@ namespace BepInCharacterSwapper
             Instance = this;
             DontDestroyOnLoad(gameObject);
             Plugin.Log.LogWarning("CharacterSwapper Hook loaded!");
+        }
+
+        private void Start()
+        {
+            
+        }
+
+        private void Update()
+        {
+            ModelPageManager_Patches.tryGetNewModels();
+
+            if (!_init && GameObject.Find("/CharactersRoot").transform.GetChild(0) != null)
+            {
+                _init = true;
+                if (Plugin.loadedCharacter != null)
+                {
+                    Plugin.Log.Log(BepInEx.Logging.LogLevel.Message, $"Loading vrm: {Plugin.loadedCharacter.Value}");
+
+                    if (File.Exists(Plugin.loadedCharacter.Value))
+                        LoadCharacter(Plugin.loadedCharacter.Value);
+                }
+            }
         }
 
         public void LoadCharacter(string path)
