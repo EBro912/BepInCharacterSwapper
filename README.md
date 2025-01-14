@@ -1,6 +1,9 @@
 # CharacterSwapper
  A model swapper for DesktopMate built for BepInEx. [THIS IS A FORK FROM](https://github.com/EBro912/BepInCharacterSwapper)
 
+ I've changed the name of the project cause i felt that the BepIn is redundancy as in the description is specified that is built for BepInEx.
+ I've also changed the vrm file path due name convention, rather to have all the data from the user into a folder named UserData rather than into the root directory.
+  
  ## Installation
  - Download the [latest v6 release](https://builds.bepinex.dev/projects/bepinex_be/733/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.733%2B995f049.zip) of BepInEx. (`BepInEx-Unity.Il2CPP-win-x64-6.0.0`)
  - Extract the .zip into `steamapps\common\Desktop Mate`
