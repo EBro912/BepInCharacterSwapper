@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace CharacterSwapper.Patches
+namespace BepInCharacterSwapper.Patches
 {
     [HarmonyPatch(typeof(ModelPageManager), nameof(ModelPageManager.Start))]
     internal class GameWindow_Patches

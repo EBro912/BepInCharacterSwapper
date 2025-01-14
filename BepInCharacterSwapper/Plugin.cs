@@ -1,11 +1,11 @@
-﻿using CharacterSwapper.Patches;
+﻿using BepInCharacterSwapper.Patches;
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
 
-namespace CharacterSwapper;
+namespace BepInCharacterSwapper;
 
 [BepInPlugin("CharacterSwapper", "CharacterSwapper", "1.0.0")]
 internal class Plugin : BasePlugin

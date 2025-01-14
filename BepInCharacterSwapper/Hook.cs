@@ -1,4 +1,4 @@
-﻿using CharacterSwapper.Patches;
+﻿using BepInCharacterSwapper.Patches;
 using BepInEx.Configuration;
 using System.IO;
 using System.Threading;
@@ -7,7 +7,7 @@ using UnityEngine;
 using System;
 using static UnityEngine.UI.CanvasScaler;
 
-namespace CharacterSwapper
+namespace BepInCharacterSwapper
 {
     internal class Hook : MonoBehaviour
     {

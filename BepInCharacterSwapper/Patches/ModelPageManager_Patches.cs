@@ -6,12 +6,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CharacterSwapper.Patches
+namespace BepInCharacterSwapper.Patches
 {
     [HarmonyPatch(typeof(ModelPageManager), nameof(ModelPageManager.Start))]
     internal class ModelPageManager_Patches
     {
-        static readonly string PATH = BepInEx.Paths.GameRootPath + "/UserData/vrm";
+        static readonly string PATH = BepInEx.Paths.GameRootPath + "/vrm";
 
         static List<string> files = new List<string>();
         private static List<string> created = new List<string>();
