@@ -107,9 +107,9 @@ namespace BepInCharacterSwapper.Patches
 
         private static void Postfix(ModelPageManager __instance)
         {
-            IntPtr mainWindow = Process.GetCurrentProcess().MainWindowHandle;
-            ReParent(mainWindow);
-            SetWindowPos(mainWindow, HWND_TOPMOST, 0, 0, 0, 0, SWP_SHOWWINDOW);
+            IntPtr mainWindow = Process.GetCurrentProcess().MainWindowHandle; // Grab window ptr
+            ReParent(mainWindow); // reparent the window to another window (invisible)
+            SetWindowPos(mainWindow, HWND_TOPMOST, 0, 0, 0, 0, SWP_SHOWWINDOW); // try to set mainWindow topmost (sometimes works)
         }
     }
 }

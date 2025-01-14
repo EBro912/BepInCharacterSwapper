@@ -13,12 +13,12 @@ namespace BepInCharacterSwapper.Patches
     {
         static readonly string PATH = BepInEx.Paths.GameRootPath + "/vrm";
 
-        static List<string> files = new List<string>();
-        private static List<string> created = new List<string>();
+        static List<string> files = new List<string>(); // files to be displayed
+        private static List<string> created = new List<string>(); // buttons created
 
         private static ModelPageManager? instance;
 
-        private static Dictionary<string, Button> buttonKeypair = new Dictionary<string, Button>();
+        private static Dictionary<string, Button> buttonKeypair = new Dictionary<string, Button>(); // button dict (file path, button instance).
 
         public static void tryGetNewModels()
         {

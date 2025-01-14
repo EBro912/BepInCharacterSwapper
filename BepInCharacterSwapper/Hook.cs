@@ -14,7 +14,7 @@ namespace BepInCharacterSwapper
         public static Hook Instance;
         private VRMLoader VRMLoader;
 
-        private bool _init = false;
+        private bool _init = false; // autoloader hook
 
         private void Awake()
         {
@@ -35,9 +35,9 @@ namespace BepInCharacterSwapper
 
         private void Update()
         {
-            ModelPageManager_Patches.tryGetNewModels();
+            ModelPageManager_Patches.tryGetNewModels(); // update model list each frame
 
-            if (!_init && GameObject.Find("/CharactersRoot").transform.GetChild(0) != null)
+            if (!_init && GameObject.Find("/CharactersRoot").transform.GetChild(0) != null) // debouncer for the model autoloader
             {
                 _init = true;
                 if (Plugin.loadedCharacter != null)
