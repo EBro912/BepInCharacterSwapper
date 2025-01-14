@@ -6,7 +6,7 @@
  - Extract the .zip into `steamapps\common\Desktop Mate`
  - Download the latest version of the mod .dll from the releases section.
  - Place the .dll in `steamapps\common\Desktop Mate\BepInEx\plugins`.
- - (Optional) Create a `vrm` folder in the `steamapps\common\Desktop Mate\BepInEx` folder. If you do not make one, the mod will make one for you.
+ - (Optional) Create a `vrm` folder in the `steamapps\common\Desktop Mate\` folder. If you do not make one, the mod will make one for you.
 
 ## Usage
 - Place all of your `.vrm` files into the aforementioned `vrm` folder.
