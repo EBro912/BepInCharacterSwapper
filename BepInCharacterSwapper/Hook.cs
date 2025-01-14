@@ -9,8 +9,6 @@ namespace BepInCharacterSwapper
         public static Hook? Instance;
         private VRMLoader? VRMLoader;
 
-        private bool _init = false; // autoloader hook
-
         private void Awake()
         {
             if (Instance != null)
@@ -27,17 +25,6 @@ namespace BepInCharacterSwapper
         {
             ModelHelper.TryGetNewModels(); // update model list each frame
 
-            if (!_init && GameObject.Find("/CharactersRoot").transform.GetChild(0) != null) // debouncer for the model autoloader
-            {
-                _init = true;
-                if (Plugin.loadedCharacter != null)
-                {
-                    Plugin.Log.Log(BepInEx.Logging.LogLevel.Message, $"Loading vrm: {Plugin.loadedCharacter.Value}");
-
-                    if (File.Exists(Plugin.loadedCharacter.Value))
-                        LoadCharacter(Plugin.loadedCharacter.Value);
-                }
-            }
         }
 
         public void LoadCharacter(string path)
