@@ -39,6 +39,7 @@ namespace CharacterSwapper.Patches
                 foreach (var item in remove)
                 {
                     files.Remove(item);
+                    GameObject.Destroy(buttonKeypair[item].gameObject);
                 }
 
                 foreach (string vrmModel in Directory.GetFiles(PATH).Where(x => x.EndsWith(".vrm")))
