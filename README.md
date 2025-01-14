@@ -27,6 +27,18 @@
 
 ## Known Issues
  - When the application launches sometimes will lose focus through the current window (it should be placed behind the current window, just minimize the current window and click over the character)
+
+## Build Guide
+ 1. Install BepInEx and launch the game.
+ 2. Once the game completly booted and the stub dlls are created create the folder 'src' on the root directory of the game. `steamapps\common\Desktop Mate`
+ 3. Perform a git clone over this repos or download it as zip and extract its contents into the 'src' folder you just created. (It should look like `steamapps\common\Desktop Mate\src\CharacterSwapper`)
+ 4. Open the .sln file.
+ 5. Set the compiler profile to release instead of debug to get the most performance ![image](https://github.com/user-attachments/assets/1ebdc51c-1b3a-4dda-b50a-719ed38eb2e7)
+ 6. (OPTIONAL) Check if there's no dependency error (`Project Solution/Project/Dependencies/Assemblies` - If any dep is missing try adding it by yourself searching on the `BepInEx/Interop/` folder)
+ 7. Compile.
+ 8. Once compiled go into `bin/Release/netstandard2.1/` and copy the CharacterSwapper.dll into `BepInEx/plugins`
+ 9. There's the mod built and installed!
+]()
    
 ## External Libraries
 This mod uses a slightly modified version of the VRMLoader and CharacterLoader from [YusufOzmen01/desktopmate-custom-avatar-loader](https://github.com/YusufOzmen01/desktopmate-custom-avatar-loader). Licensing can be found below:
