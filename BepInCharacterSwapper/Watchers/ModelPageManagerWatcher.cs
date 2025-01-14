@@ -10,23 +10,13 @@ namespace BepInCharacterSwapper.Watchers
         {
             if (!Instance)
                 Instance = FindObjectOfType<ModelPageManager>();
-            else
-                Cleanup();
         }
 
         private void Update()
         {
             if(!Instance)
                 Instance = FindObjectOfType<ModelPageManager>();
-            else
-                Cleanup();
         }
 
-
-        private void Cleanup()
-        {
-            if (Instance != null)
-                Destroy(gameObject);
-        }
     }
 }
