@@ -1,5 +1,5 @@
 # CharacterSwapper
- A model swapper for DesktopMate built for BepInEx.
+ A model swapper for DesktopMate built for BepInEx. [THIS IS A FORK FROM](https://github.com/EBro912/BepInCharacterSwapper)
 
  ## Installation
  - Download the [latest v6 release](https://builds.bepinex.dev/projects/bepinex_be/733/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.733%2B995f049.zip) of BepInEx. (`BepInEx-Unity.Il2CPP-win-x64-6.0.0`)
