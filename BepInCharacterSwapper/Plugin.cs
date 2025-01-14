@@ -1,4 +1,4 @@
-﻿using BepInCharacterSwapper.Patches;
+﻿using BepInCharacterSwapper.Watchers;
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Logging;
@@ -7,7 +7,7 @@ using HarmonyLib;
 
 namespace BepInCharacterSwapper;
 
-[BepInPlugin("CharacterSwapper", "CharacterSwapper", "1.0.0")]
+[BepInPlugin("BepInCharacterSwapper", "BepInCharacterSwapper", "1.0.0")]
 internal class Plugin : BasePlugin
 {
     internal static new ManualLogSource Log;
@@ -25,5 +25,6 @@ internal class Plugin : BasePlugin
         harmony.PatchAll();
 
         AddComponent<Hook>();
+        AddComponent<ModelPageManagerWatcher>(); // add the watcher instance
     }
 }

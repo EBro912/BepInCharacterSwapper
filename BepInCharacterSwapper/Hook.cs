@@ -1,18 +1,13 @@
-﻿using BepInCharacterSwapper.Patches;
-using BepInEx.Configuration;
-using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.IO;
 using UnityEngine;
-using System;
-using static UnityEngine.UI.CanvasScaler;
+using BepInCharacterSwapper.Helpers;
 
 namespace BepInCharacterSwapper
 {
     internal class Hook : MonoBehaviour
     {
-        public static Hook Instance;
-        private VRMLoader VRMLoader;
+        public static Hook? Instance;
+        private VRMLoader? VRMLoader;
 
         private bool _init = false; // autoloader hook
 
@@ -28,14 +23,9 @@ namespace BepInCharacterSwapper
             Plugin.Log.LogWarning("CharacterSwapper Hook loaded!");
         }
 
-        private void Start()
-        {
-            
-        }
-
         private void Update()
         {
-            ModelPageManager_Patches.tryGetNewModels(); // update model list each frame
+            ModelHelper.TryGetNewModels(); // update model list each frame
 
             if (!_init && GameObject.Find("/CharactersRoot").transform.GetChild(0) != null) // debouncer for the model autoloader
             {
