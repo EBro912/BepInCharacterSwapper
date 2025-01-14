@@ -1,5 +1,5 @@
-# CharacterSwapper
- A model swapper for DesktopMate built for BepInEx. [THIS IS A FORK FROM](https://github.com/EBro912/BepInCharacterSwapper)
+# BepInCharacterSwapper
+ A model swapper for DesktopMate built for BepInEx.
 
  I've changed the name of the project cause i felt that the BepIn is redundancy as in the description is specified that is built for BepInEx.</br>
  I've also changed the vrm directory path due name convention, rather to have all the data from the user into a folder named UserData rather than into the root directory.
