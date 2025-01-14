@@ -9,7 +9,7 @@
  - Extract the .zip into `steamapps\common\Desktop Mate`
  - Download the latest version of the mod .dll from the releases section.
  - Place the .dll in `steamapps\common\Desktop Mate\BepInEx\plugins`.
- - (Optional) Create a `vrm` folder in the `steamapps\common\Desktop Mate` folder. If you do not make one, the mod will make one for you.
+ - (Optional) Create a `vrm` folder in the `steamapps\common\Desktop Mate\` folder. If you do not make one, the mod will make one for you.
 
 ## Usage
 - Place all of your `.vrm` files into the aforementioned `vrm` folder.
@@ -19,12 +19,14 @@
 
 ![preview](https://cdn.discordapp.com/attachments/343113240143986709/1328204316137226250/image.png?ex=6785da29&is=678488a9&hm=294b679aa54a290a4b05567dcd203c926d648a2c27459bba03813cd2bc4696f3&)
 
+## Known Issues
+- If you delete or add a `.vrm` while Desktop Mate is running, the mod will (currently) not detect this change. If you add or remove any models you will have to restart Desktop Mate.
+- Due to a bug in Desktop Mate, you may see spam in the console. Navigate to `Bepinex/config/BepInEx.cfg` and set `UnityLogListening = false` to hide these messages.
+- When the application launches there is a small chance that the window will appear below the current window (simply minimize the current window).
+
 ## Planned Changes
 - Per-model settings
 - Allow customization of buttons
-
-## Known Issues
- - When the application launches there is a small chance that the window will appear below the current window (simply minimize the current window).
    
 ## Build Guide
  1. Install BepInEx and launch the game.
