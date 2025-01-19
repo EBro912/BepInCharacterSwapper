@@ -1,0 +1,8 @@
+{
+  "author": "EBro912",
+  "discord": "144603347624656905",
+  "version": "1.0.0",
+  "type": "BepInEx",
+  "category": ["Overhaul"],
+  "description": "A model swapper for DesktopMate built for BepInEx."
+}
